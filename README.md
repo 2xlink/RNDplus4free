@@ -1,3 +1,6 @@
+Changes from upstream:
+- Tries to replace content every second for 5 seconds
+
 Loads hidden text from webpage sourcecode.
 Works on this websites:
 

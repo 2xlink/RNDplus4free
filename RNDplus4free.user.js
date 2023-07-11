@@ -40,11 +40,6 @@ function extractTextAndHeaderSrc(content) {
   };
 }
 
-
-const extractedValues = extractTextAndHeaderSrc(Fusion.globalContent); // Call the function with Fusion.globalContent as the argument and store the returned result in extractedValues
-console.log("Extracted text: ", extractedValues.text); // Output the extracted text and header values to the console
-
-
 function removeElementByTag(tagName) {
   const elements = document.getElementsByTagName(tagName); // Get all elements with the specified tag name from the document
   const elementsArray = Array.from(elements); // Convert the HTMLCollection of elements to an array for easier manipulation
@@ -52,9 +47,6 @@ function removeElementByTag(tagName) {
     singleElement.remove(); // Loop through each element in the array and remove it from the document
   });
 }
-
-const toRemoveObjTypeToRemoveClassByTagName = "svg"; // Define the tag name of the elements to be removed
-removeElementByTag(toRemoveObjTypeToRemoveClassByTagName); // Call the function with the specified tag name to remove all elements with that tag name from the document
 
 
 function deleteElementsByTypeAndClassPart(type, classPart) {
@@ -74,11 +66,6 @@ function deleteElementsByTypeAndClassPart(type, classPart) {
   }
 }
 
-const toRemoveObjTypeToRemoveClassByClassName = 'div'; // Define the tag type of the elements to be removed
-const toRemoveClassByClassName = "ArticleContentLoaderstyled__Gradient-sc-1npmba7-0"; // Define the class name part to match for elements to be removed
-deleteElementsByTypeAndClassPart(toRemoveObjTypeToRemoveClassByClassName, toRemoveClassByClassName); // Call the function with the specified tag type and class name part to remove all elements with that tag type and matching class name part from the document
-
-
 function deleteClassByPart(className, classPart) {
   const regex = new RegExp(classPart, 'g'); // Create a regular expression object with the specified class name part as a pattern to match
   const elements = document.getElementsByClassName(className); // Get all elements with the specified class name from the document
@@ -91,9 +78,6 @@ function deleteClassByPart(className, classPart) {
     obj.className = updatedClassNames.join(' '); // Join the updated class names array back into a string and set it as the new value for the element's className property, effectively removing the class names that match the specified class name part
   }
 }
-
-deleteClassByPart('ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1', 'hBZztO'); // Call the function with the specified class name and class name part to remove the class names that match the specified class name part from all elements with the specified class name in the document
-
 
 function updateParagraphContentWithClass(objType, className, newContent) {
   // Find the first element that matches the specified object type and has a class name that starts with the specified class name
@@ -108,11 +92,31 @@ function updateParagraphContentWithClass(objType, className, newContent) {
   }
 }
 
-const objType = 'div'; // The type of HTML element to search for
-const className = 'ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1'; // The starting part of the class name to match
-const newContent = extractedValues.text.join("<br />"); // The new content to set for the matching element, joined with "<br />" as a line break
-updateParagraphContentWithClass(objType, className, newContent); // Call the function with the specified object type, class name, and new content to update the innerHTML of the matching element
+const extractedValues = extractTextAndHeaderSrc(Fusion.globalContent); // Call the function with Fusion.globalContent as the argument and store the returned result in extractedValues
+console.log("Extracted text: ", extractedValues.text); // Output the extracted text and header values to the console
 
+function main() {
+  const toRemoveObjTypeToRemoveClassByTagName = "svg"; // Define the tag name of the elements to be removed
+  removeElementByTag(toRemoveObjTypeToRemoveClassByTagName); // Call the function with the specified tag name to remove all elements with that tag name from the document
+
+  const toRemoveObjTypeToRemoveClassByClassName = 'div'; // Define the tag type of the elements to be removed
+  const toRemoveClassByClassName = "ArticleContentLoaderstyled__Gradient-sc-1npmba7-0"; // Define the class name part to match for elements to be removed
+  deleteElementsByTypeAndClassPart(toRemoveObjTypeToRemoveClassByClassName, toRemoveClassByClassName); // Call the function with the specified tag type and class name part to remove all elements with that tag type and matching class name part from the document
+
+  deleteClassByPart('ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1', 'hBZztO'); // Call the function with the specified class name and class name part to remove the class names that match the specified class name part from all elements with the specified class name in the document
+
+  const objType = 'div'; // The type of HTML element to search for
+  const className = 'ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1'; // The starting part of the class name to match
+  const newContent = extractedValues.text.join("<br />"); // The new content to set for the matching element, joined with "<br />" as a line break
+  updateParagraphContentWithClass(objType, className, newContent); // Call the function with the specified object type, class name, and new content to update the innerHTML of the matching element
+}
+
+main()
+setTimeout(main, 1000)
+setTimeout(main, 2000)
+setTimeout(main, 3000)
+setTimeout(main, 4000)
+setTimeout(main, 5000)
 
 const styleElement = document.createElement('style'); // Create a new <style> element
 document.head.appendChild(styleElement); // Append the <style> element to the <head> of the document

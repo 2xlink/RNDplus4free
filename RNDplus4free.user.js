@@ -122,5 +122,5 @@ const styleElement = document.createElement('style'); // Create a new <style> el
 document.head.appendChild(styleElement); // Append the <style> element to the <head> of the document
 
 // Insert CSS rules into the style sheet of the <style> element
-styleElement.sheet.insertRule('.article-text { color: #fff; mix-blend-mode: difference; margin: 0px; padding-bottom: 8px; padding-top: 8px; font-family: "Source Serif Pro", Palatino, "Droid Serif", serif; font-size: 17px; font-weight: 600; letter-spacing: 0px; line-height: 26px; }', 0);
-styleElement.sheet.insertRule('.article-header { color: #fff; mix-blend-mode: difference; font-family: "DIN Next LT Pro", Arial, Roboto, sans-serif; font-weight: 700; letter-spacing: -0.25px; font-size: 24px; line-height: 30px; }', 0);
+styleElement.sheet.insertRule('.article-text { color: #fff; mix-blend-mode: difference; margin: 0px; padding-bottom: 8px; padding-top: 8px; font-family: "Source Serif Pro", Palatino, "Droid Serif", serif; font-size: 17px; letter-spacing: 0px; line-height: 26px; }', 0);
+styleElement.sheet.insertRule('.article-header { color: #fff; mix-blend-mode: difference; font-family: "DIN Next LT Pro", Arial, Roboto, sans-serif; letter-spacing: -0.25px; font-size: 24px; line-height: 30px; }', 0);

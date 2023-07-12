@@ -1,5 +1,6 @@
 Changes from upstream:
 - Tries to replace content every second for 5 seconds
+- Improves font styling
 
 Loads hidden text from webpage sourcecode.
 Works on this websites:
@@ -19,5 +20,5 @@ Works on this websites:
 
 Installation
 
-- Install Tampermonkey from https://www.tampermonkey.net
-- Load userscript from https://github.com/mx4k/RNDplus4free/raw/master/RNDplus4free.user.js
+- Do not use Tampermonkey (it is proprietary), use Violentmonkey or Greasemonkey instead.
+- Load userscript from https://github.com/2xlink/RNDplus4free/raw/master/RNDplus4free.user.js

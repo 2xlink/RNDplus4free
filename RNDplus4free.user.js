@@ -103,10 +103,10 @@ function main() {
   const toRemoveClassByClassName = "ArticleContentLoaderstyled__Gradient-sc-1npmba7-0"; // Define the class name part to match for elements to be removed
   deleteElementsByTypeAndClassPart(toRemoveObjTypeToRemoveClassByClassName, toRemoveClassByClassName); // Call the function with the specified tag type and class name part to remove all elements with that tag type and matching class name part from the document
 
-  deleteClassByPart('ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1', 'hBZztO'); // Call the function with the specified class name and class name part to remove the class names that match the specified class name part from all elements with the specified class name in the document
+  deleteClassByPart('ArticleHeadstyled__ArticleTeaserContainer-tdzyy5-1', 'fgRfCA'); // Call the function with the specified class name and class name part to remove the class names that match the specified class name part from all elements with the specified class name in the document
 
   const objType = 'div'; // The type of HTML element to search for
-  const className = 'ArticleHeadstyled__ArticleTeaserContainer-sc-1xd2qac-1'; // The starting part of the class name to match
+  const className = 'ArticleHeadstyled__ArticleTeaserContainer-tdzyy5-1'; // The starting part of the class name to match
   const newContent = extractedValues.text.join("<br />"); // The new content to set for the matching element, joined with "<br />" as a line break
   updateParagraphContentWithClass(objType, className, newContent); // Call the function with the specified object type, class name, and new content to update the innerHTML of the matching element
 }
